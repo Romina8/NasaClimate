@@ -1,5 +1,6 @@
 package ar.com.ada.api.nasaclimate.repositories;
 
-public class TemperaturaRepository{
-    
+@Repository
+public interface TemperaturaRepository extends JpaRepository <Temperatura, Interer>{
+
 }
