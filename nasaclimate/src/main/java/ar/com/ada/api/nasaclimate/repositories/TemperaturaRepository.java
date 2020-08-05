@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TemperaturaRepository extends JpaRepository<Temperatura, Interer>{
+public interface TemperaturaRepository extends JpaRepository<Temperatura, Integer>{
+
+    public Temperatura findByTemperaturaId(int temperaturaId);
 
 }

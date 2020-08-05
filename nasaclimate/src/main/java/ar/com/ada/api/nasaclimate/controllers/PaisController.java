@@ -1,7 +1,22 @@
 package ar.com.ada.api.nasaclimate.controllers;
 
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import ar.com.ada.api.nasaclimate.entities.Pais;
+import ar.com.ada.api.nasaclimate.models.request.CreacionPaisRequest;
+import ar.com.ada.api.nasaclimate.models.response.GenericResponse;
+import ar.com.ada.api.nasaclimate.services.PaisService;
+
 @RestController
-public class PaisControllers{
+public class PaisController{
 
     /*
      * POST /paises : que permita la creación de un país.
@@ -25,6 +40,7 @@ public class PaisControllers{
        GenericResponse resp = new GenericResponse();
        resp.isOk = true;
        resp.message = "Se agregó el país " + pais.nombre + " con éxito";
+       resp.id = pais.codigoPais;
  
        return ResponseEntity.ok(resp);
     }

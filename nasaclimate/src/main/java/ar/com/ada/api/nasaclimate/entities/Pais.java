@@ -7,7 +7,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Pais{
 
-    private String codigoPais;
+    @Id
+    @Column(name = "codigo_pais")
+    private int codigoPais;
     private String nombre;
     
     @OneToMany(mappedBy = "pais", cascade = CascadeType.ALL, fetch = FetchType.EAGER)

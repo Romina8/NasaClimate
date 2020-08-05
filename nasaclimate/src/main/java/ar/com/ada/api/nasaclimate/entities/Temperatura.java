@@ -10,7 +10,7 @@ public class Temperatura{
     @Id
     @Column (name = "temperatura_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int IdTemperatura;
+    private int temperaturaId;
     @Column (name = "anio_temperatura")
     private int anioTemperatura;
     private Double grados;
@@ -28,12 +28,12 @@ public class Temperatura{
         this.temperaturaId = temperaturaId;
     }
 
-    public int getAnio() {
-        return anio;
+    public int getAnioTemperatura() {
+        return anioTemperatura;
     }
 
-    public void setAnio(int anio) {
-        this.anio = anio;
+    public void setAnioTemperatura(int anioTemperatura) {
+        this.anioTemperatura = anioTemperatura;
     }
 
     public Double getGrados() {

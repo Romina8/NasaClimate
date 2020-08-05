@@ -13,7 +13,7 @@ public class PaisService{
     @Autowired
     PaisRepository paisRepository;
 
-    public Pais crearPais(Integer codigoPais, String nombre){
+    public void crearPais(int codigoPais, String nombre) {
 
         Pais pais = new Pais();
 
