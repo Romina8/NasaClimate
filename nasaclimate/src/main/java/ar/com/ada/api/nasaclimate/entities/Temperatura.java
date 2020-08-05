@@ -1,15 +1,15 @@
 package ar.com.ada.api.nasaclimate.entities;
 
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name = "temperatura")
 public class Temperatura{
 
     @Id
-    @Column (name = "temperatura_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "temperatura_id")
     private int temperaturaId;
     @Column (name = "anio_temperatura")
     private int anioTemperatura;
@@ -17,7 +17,6 @@ public class Temperatura{
 
     @ManyToOne
     @JoinColumn(name = "codigo_pais", referencedColumnName = "codigo_pais")
-    @JsonIgnore
     private Pais pais;
 
     public int getTemperaturaId() {

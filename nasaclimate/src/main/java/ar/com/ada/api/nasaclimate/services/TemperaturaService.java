@@ -1,10 +1,8 @@
 package ar.com.ada.api.nasaclimate.services;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import ar.com.ada.api.nasaclimate.entities.Temperatura;
 import ar.com.ada.api.nasaclimate.repositories.TemperaturaRepository;
 @Service
